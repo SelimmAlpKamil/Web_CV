@@ -36,8 +36,6 @@ Easy Deployment: Can be deployed on various hosting platforms like Azure, GitHub
 Project Structure
 Here is a typical ASP.NET Core project structure for the Web CV:
 
-bash
-Kodu kopyala
 WebCV/
 ├── Controllers/
 │   └── HomeController.cs       # Controller for handling requests
@@ -87,22 +85,18 @@ git clone https://github.com/SelimmAlpKamil/Web_CV.git
 Navigate to the Project Directory
 
 bash
-Kodu kopyala
 cd WebCV/WebCV
 Restore Dependencies
 
 bash
-Kodu kopyala
 dotnet restore
 Build the Project
 
 bash
-Kodu kopyala
 dotnet build
 Run the Application
 
 bash
-Kodu kopyala
 dotnet run
 Open in Browser
 
@@ -490,7 +484,8 @@ Email: selimalpk@gmail.com
 LinkedIn https://www.linkedin.com/in/selimalpkamil/
 
 ![image](https://github.com/user-attachments/assets/4709f3f0-629b-4c35-ad97-0cab4f974377)
-![image](https://github.com/user-attachments/assets/fb19edd4-ba1b-4ff3-9ccd-301d3d3acced)
+![image](https://github.com/user-attachments/assets/fef2d741-3c5d-4b95-bc36-29f1e608f73d)
+![image](https://github.com/user-attachments/assets/69f8d275-37cb-40d4-afff-5e042c5690e9)
 ![image](https://github.com/user-attachments/assets/49583c14-1a32-44d0-b213-e4559ef1d5fc)
 ![image](https://github.com/user-attachments/assets/84d2870b-ec6f-4f2c-94b9-9bdcef531c41)
 
