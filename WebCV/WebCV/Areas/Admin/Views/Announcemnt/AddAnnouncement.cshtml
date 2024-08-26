@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Concreate.Announcement
+
+@{
+    ViewData["Title"] = "AddAnnouncement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group" style="margin:10px">
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="AnnouncementTitle" />
+    <span asp-validation-for="AnnouncementTitle" class="alert-danger"></span>
+    <br />
+    <label>Mesaj</label>
+    <input type="text" class="form-control" asp-for="AnnouncementSubject" />
+    <span asp-validation-for="AnnouncementSubject" class="alert-danger"></span>
+    <br />
+    <button class="btn btn-outline-primary">Ekle</button>
+</form>
+

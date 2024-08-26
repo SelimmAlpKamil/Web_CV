@@ -1,0 +1,45 @@
+﻿@model IEnumerable<EntityLayer.Concreate.ToDoList>
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>Yapılacak Madde</th>
+        <th>Durum</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+        if(@x.TodoListCompleted == true)
+        {
+            <tr>
+                <td style="text-decoration: line-through; color:red">@x.TodoListTitle</td>
+                <td>
+                    <a href="/Admin/ToDoList/NotCompleteToDoList/@x.TodoListId" class="btn btn-outline-warning">Yapılmadı</a>
+                </td>
+                <td>
+                    <a href="/Admin/ToDoList/DeleteToDoList/@x.TodoListId" class="btn btn-outline-danger">Sil</a>
+                </td>
+            </tr>  
+
+        }
+        else
+        {
+            <tr>
+                <td>@x.TodoListTitle</td>
+                <td>
+                    <a href="/Admin/ToDoList/CompleteToDoList/@x.TodoListId" class="btn btn-outline-success">Yapıldı</a>
+                </td>
+                <td>
+                    <a href="/Admin/ToDoList/DeleteToDoList/@x.TodoListId" class="btn btn-outline-danger">Sil</a>
+                </td>
+            </tr>
+        }
+        
+    }
+</table>

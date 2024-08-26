@@ -1,0 +1,36 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Service>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<Table class="table table-bordred">
+    <tr>
+        <th>Resim</th>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>
+                <img src="@x.ServiceImageURL" height="50px" width="50px" />
+            </td>
+            <td>@x.ServiceId</td>
+            <td>@x.ServiceTitle</td>
+            <td>
+                <a href="/Admin/Services/DeleteService/@x.ServiceId" class="btn btn-outline-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Admin/Services/UpdateService/@x.ServiceId" class="btn btn-outline-warning">Güncelle</a>
+            </td>
+        </tr>
+    }
+
+</Table>
+
+<a style="margin-top:20px; margin-bottom:20px" class="btn btn-outline-primary" href="/Admin/Services/AddService">Ekle</a>
+

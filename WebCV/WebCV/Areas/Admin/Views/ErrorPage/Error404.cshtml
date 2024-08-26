@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Sayfa Bulunamadı</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:crimson;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        .error-title {
+            font-size: 120px;
+            margin: 0;
+        }
+
+        .error-message {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .home-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: crimson;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+            .home-button:hover {
+                background-color: #e0e0e0;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-title">Upppss 404</div>
+        <div class="error-message" style="margin-top:20px">Sayfa Bulunamadı</div>
+        <a href="/Admin/Login/Index" class="home-button">Giriş Sayfasına Git</a>
+    </div>
+</body>
+</html>

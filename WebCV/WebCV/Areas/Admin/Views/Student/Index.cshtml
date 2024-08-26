@@ -1,0 +1,38 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Student>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<Table class="table table-bordred">
+    <tr>
+        <th>Resim</th>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>
+                <img src="@x.StudentImageURL" height="50px" width="50px" />
+            </td>
+            <td>@x.StudentId</td>
+            <td>@x.StudentName</td>
+            <td>@x.StudentDate</td>
+            <td>
+                <a  href="/Admin/Student/DeleteStudent/@x.StudentId" class="btn btn-outline-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Admin/Student/UpdateStudent/@x.StudentId" class="btn btn-outline-warning">Güncelle</a>
+            </td>
+        </tr>
+    }
+
+</Table>
+
+<a style="margin-top:20px; margin-bottom:20px" class="btn btn-outline-primary" href="/Admin/Student/AddStudent">Ekle</a>

@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concreate.Feature
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group" style="margin:10px">
+    <input type="hidden" class="form-control" asp-for="FeatureId" />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="FeatureHeader" />
+    <span asp-validation-for="FeatureHeader" class="alert-danger"></span>
+    <br />
+    <label>İsim</label>
+    <input type="text" class="form-control" asp-for="FeatureName" />
+    <span asp-validation-for="FeatureName" class="alert-danger"></span>
+    <br />
+    <label>Alan</label>
+    <input type="text" class="form-control" asp-for="FeatureTitle" />
+    <span asp-validation-for="FeatureTitle" class="alert-danger"></span>
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+
+</form>
+

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<EntityLayer.Concreate.AppRoles>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<Table class="table table-bordred">
+    <tr>
+        <th>Id</th>
+        <th>Role</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Name</td>
+            <td>
+                <a href="/Admin/Role/DeleteRole/@x.Id" class="btn btn-outline-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Admin/Role/UpdateRole/@x.Id" class="btn btn-outline-warning">Güncelle</a>
+            </td>
+        </tr>
+    }
+
+</Table>
+
+<a style="margin-top:20px; margin-bottom:20px" class="btn btn-outline-primary" href="/Admin/Role/AddRole">Ekle</a>
+<a style="margin-bottom:20px" class="btn btn-outline-primary" href="/Admin/Role/UserList">Role Ata</a>
+
+
+
+

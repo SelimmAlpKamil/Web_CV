@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concreate.SocialMedia
+
+
+@{
+    ViewData["Title"] = "UpdateSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group" style="margin:10px">
+    <input type="hidden" class="form-control" asp-for="SocialMediaId" />
+    <label>İkone</label>
+    <input type="text" class="form-control" asp-for="SocialMediaIcon" />
+    <span class="alert-danger" asp-validation-for="SocialMediaIcon"></span>
+    <br />
+    <label>İsim</label>
+    <input type="text" class="form-control" asp-for="SocialMediaName" />
+    <span class="alert-danger" asp-validation-for="SocialMediaName"></span>
+    <br />
+    <label>URL</label>
+    <input type="text" class="form-control" asp-for="SocialMediaURL" />
+    <span class="alert-danger" asp-validation-for="SocialMediaURL"></span>
+    <br />
+    <button class="btn btn-outline-info">Güncelle</button>
+</form>
+

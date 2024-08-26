@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EntityLayer.Concreate.SocialMedia>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<Table class="table table-bordred">
+    <tr>
+        <th>Id</th>
+        <th>İcone</th>
+        <th>İsim</th>
+        <th>URL</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.SocialMediaId</td>
+            <td>
+                <i  class="@x.SocialMediaIcon fa-4x"></i>
+            </td>
+        
+            <td>@x.SocialMediaName</td>
+            <td>@x.SocialMediaURL</td>
+            <td>
+                <a href="/Admin/SocialMedia/DeleteSocialMedia/@x.SocialMediaId" class="btn btn-outline-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Admin/SocialMedia/UpdateSocialMedia/@x.SocialMediaId" class="btn btn-outline-warning">Güncelle</a>
+            </td>
+        </tr>
+    }
+
+</Table>
+
+<a style="margin-top:20px; margin-bottom:20px" href="/Admin/SocialMedia/AddSocialMedia" class="btn btn-outline-primary">Ekle</a>
+

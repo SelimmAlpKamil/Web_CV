@@ -1,0 +1,180 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<div class="container-fluid">
+    <div class="header-body">
+        <div class="row align-items-center py-4">
+        </div>
+        <!-- Card stats -->
+        <div class="row">
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Okunmamış Gelen iletişim mesaj sayısı Sayısı</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.activeMessageCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                    <i class="ni ni-active-40"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Okunmuş Gelen iletişim mesaj Sayısı</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.pasifMessageCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                    <i class="ni ni-planet"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Proje Sayısı</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.projeCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                    <i class="ni ni-chart-pie-35"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Referans Sayısı</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.testimoniolCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                                    <i class="ni ni-money-coins"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Yetenek Sayısı</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.skilCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                    <i class="ni ni-chart-bar-32"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Deneyim Sayısı</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.experienceCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-red text-white rounded-circle shadow">
+                                    <i class="ni ni-shop"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Okul Sayısı</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.studentCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-blue text-white rounded-circle shadow">
+                                    <i class="ni ni-bus-front-12"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Dal Sayısı</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.serviceCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-green text-white rounded-circle shadow">
+                                    <i class="ni ni-app"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@await Component.InvokeAsync("AdminAddToDoList")
+
+@await Component.InvokeAsync("AdminToDoList")

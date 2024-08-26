@@ -1,0 +1,50 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Testimonial>
+
+
+@{
+    ViewData["Title"] = "PasifTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Resim</th>
+            <th>İsim</th>
+            <th>Şirket</th>
+            <th>Sil</th>
+            <th>Onayla</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.TestimonialId</td>
+                <td>
+                    <img src="@x.TestimonialImageURL" width="100px" height="100px" style="object-fit:cover" />
+                </td>
+                <td>
+                    @x.TestimonialName
+                </td>
+                <td>@x.TestimonialCompany</td>
+                <td>
+                    <a href="/Admin/Testimonial/DeleteTestimonial/@x.TestimonialId" class="btn btn-outline-danger">Sil</a>
+                </td>
+                <td>
+                    <a href="/Admin/Testimonial/ChangeStatusTestimonial/@x.TestimonialId" class="btn btn-outline-warning">Onayla</a>
+                </td>
+
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h2>Onay Bekleyen Yorum Bulunmamaktadır</h2>
+}
+
+
+<a style="margin-top:20px" href="/Admin/Testimonial/Index" class="btn btn-outline-primary">Onaylanan Yorumlar</a>

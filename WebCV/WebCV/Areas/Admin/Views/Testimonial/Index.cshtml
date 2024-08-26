@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Testimonial>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Resim</th>
+        <th>İsim</th>
+        <th>Şirket</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Sitede Gör</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.TestimonialId</td>
+            <td>
+                <img src="@x.TestimonialImageURL" width="100px" height="100px" style="object-fit:cover" />
+            </td>
+            <td>
+                @x.TestimonialName
+            </td>
+            <td>@x.TestimonialCompany</td>
+            <td>
+                <a href="/Admin/Testimonial/ChangeStatusFalseTestimonial/@x.TestimonialId" class="btn btn-outline-danger">Onaylama</a>
+            </td>
+            <td>
+                <a href="/Admin/Testimonial/UpdateTestimonial/@x.TestimonialId" class="btn btn-outline-warning">Güncelle</a>
+            </td>
+            <td>
+                <a href="/Home/Index#testimonials" class="btn btn-outline-dark">Sitede Gör</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Admin/Testimonial/AddTestimonial" class="btn btn-outline-primary">Ekle</a>
+
+
+<a href="/Admin/Testimonial/PasifTestimonial" style="margin-top:20px" class="btn btn-outline-primary">Onay Bekleyen Yorumlar</a>
+

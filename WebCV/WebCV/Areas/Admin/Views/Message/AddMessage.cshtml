@@ -1,0 +1,28 @@
+﻿@model EntityLayer.Concreate.Message
+
+@{
+    ViewData["Title"] = "AddMessage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<form method="post" style="margin:20px">
+    <label>Mesajı gönderen</label>
+    <input type="text" asp-for="Sender" value="@ViewBag.user" readonly class="form-control" />
+    <label>Mesaj Başlık</label>
+    <input type="text" asp-for="MessageSubject" class="form-control" />
+    <span asp-validation-for="MessageSubject" class="alert-danger"></span>
+    <br />
+    <label>Mesaj</label>
+    <textarea rows="5" cols="20" asp-for="MessageContact" class="form-control"></textarea>
+    <span asp-validation-for="MessageContact" class="alert-danger"></span>
+    <br />
+
+    <label>Mesajı gönderilecek Kişiyi Seçin</label>
+    @Html.DropDownListFor(x => x.Recever, (List<SelectListItem>)ViewBag.userList, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-info">Gönder</button>
+</form>
+
+

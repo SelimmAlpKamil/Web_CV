@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<!-- upto 2 directory depth-->
+<html lang="en-US">
+
+@await Html.PartialAsync("/Views/HomeLayotPartial/_HomeHeadPartial.cshtml")
+
+<body id="top">
+
+    @await Html.PartialAsync("/Views/HomeLayotPartial/_HomeHeaderPartial.cshtml")
+
+    <div class="page-content">
+        <div id="content">
+
+            @RenderBody()
+
+            @await Html.PartialAsync("/Views/HomeLayotPartial/_HomeFooterPartial.cshtml")
+
+        </div>
+    </div>
+
+    @await Html.PartialAsync("/Views/HomeLayotPartial/_HomeScriptPartial.cshtml")
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Experience>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<Table class="table table-bordred">
+    <tr>
+        <th>Resim</th>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>
+                <img src="@x.ExperienceImageURL" height="50px" width="50px" />
+            </td>
+            <td>@x.ExperienceId</td>
+            <td>@x.ExperienceTitle</td>
+            <td>@x.ExperienceDate</td>
+            <td>
+                <a  href="/Admin/Experience/DeleteExperience/@x.ExperienceId" class="btn btn-outline-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Admin/Experience/UppdateExperience/@x.ExperienceId" class="btn btn-outline-warning">Güncelle</a>
+            </td>
+        </tr>
+    }
+
+</Table>
+
+<a style="margin-top:20px; margin-bottom:20px" href="/Admin/Experience/AddExperience" class="btn btn-outline-primary">Ekle</a>
+
+

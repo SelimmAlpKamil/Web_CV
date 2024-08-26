@@ -1,0 +1,20 @@
+﻿@model EntityLayer.Concreate.AppRoles
+
+@{
+    ViewData["Title"] = "ChangeRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group" style="margin:10px">
+    <label>Mevcut Rol</label>
+    <input type="text" readonly value="@ViewBag.currentRole" class="form-control" />
+    <br />
+
+    @Html.DropDownListFor(x => x.Id, (List<SelectListItem>)ViewBag.roleList, new { @class = "form-control" })
+    <br />
+
+
+
+    <button class="btn btn-outline-info">Güncelle</button>
+</form>
+

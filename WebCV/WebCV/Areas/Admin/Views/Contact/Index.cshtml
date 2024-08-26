@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Contact>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>İsim</th>
+            <th>Mail</th>
+            <th>Başlık</th>
+            <th>Detay</th>
+            <th>Okundu/th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ContactId</td>
+                <td>
+                    @x.ContactName
+                </td>
+                <td>
+                    @x.ContactMail
+                </td>
+                <td>@x.ContactSubject</td>
+                <td>
+                    <a href="/Admin/Contact/DetailContact/@x.ContactId" class="btn btn-outline-info">Detay</a>
+                </td>
+                <td>
+                    <a href="/Admin/Contact/ChangeStatusPasif/@x.ContactId" class="btn btn-outline-danger">Okundu Olarak İşaretle</a>
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h2>Gösterilecek mesaj yok</h2>
+}
+
+<a style="margin-top:20px; margin-bottom:20px" href="/Admin/Contact/PasifMessage" class="btn btn-outline-primary">Okunan Mesajlar</a>

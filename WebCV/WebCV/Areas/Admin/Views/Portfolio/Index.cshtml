@@ -1,0 +1,43 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Portfolio>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Resim</th>
+        <th>Başlık</th>
+        <th>URL</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Sitede Gör</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.PortfolioId</td>
+            <td>
+                <img src="@x.PortfolioImageURL" width="100px" height="100px" style="object-fit:cover" />
+            </td>
+            <td>
+                @x.PortfolioTitle
+            </td>
+            <td>@x.PortfolioURL</td>
+            <td>
+                <a href="/Admin/Portfolio/DeletePortfolio/@x.PortfolioId" class="btn btn-outline-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Admin/Portfolio/UpdatePortfolio/@x.PortfolioId" class="btn btn-outline-warning">Güncelle</a>
+            </td>
+            <td>
+                <a href="/Home/Index#portfolio" class="btn btn-outline-dark">Sitede Gör</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Admin/Portfolio/AddPortfolio" class="btn btn-outline-primary">Ekle</a>
+

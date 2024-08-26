@@ -1,0 +1,18 @@
+﻿@model EntityLayer.Concreate.Message
+
+
+@{
+    ViewData["Title"] = "MessageDetay";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<form style="margin:20px">
+    <label>Konu</label>
+    <input type="text" class="form-control" asp-for="MessageSubject"  readonly/>
+    <br />
+    <label>Mesaj</label>
+    <textarea rows="5" cols="20" class="form-control" asp-for="MessageContact"  readonly></textarea>
+    <br />
+</form>
+
+

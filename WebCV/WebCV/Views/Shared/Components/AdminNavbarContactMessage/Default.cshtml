@@ -1,0 +1,55 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Contact>
+
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<li class="nav-item dropdown">
+    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="ni ni-bell-55"></i>
+    </a>
+
+    <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
+
+        <div class="px-3 py-3">
+            <h5 class="text-sm text-muted m-0">Toplam Mesaj Adeti: <strong class="text-primary">@ViewBag.countMessage</strong></h5>
+            <h6 class="text-sm text-muted m-0">Aşağı kısımda en yeni 5 adet mesaj listelenmektedir.</h6>
+        </div>
+
+        <div class="list-group list-group-flush">
+
+
+            @if (Model.Count() > 0)
+            {
+                @foreach (var x in Model)
+                {
+                    <a href="/Admin/Contact/DetailContact/@x.ContactId" class="list-group-item list-group-item-action">
+                        <div class="col ml--2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h4 class="mb-0 text-sm">@x.ContactName</h4>
+                                </div>
+                                <div class="text-right text-muted">
+                                    <small>@x.ContactDate.ToString("dd-MM-yyyy")</small>
+                                </div>
+                            </div>
+                            <p class="text-sm mb-0">@x.ContactSubject</p>
+                        </div>
+                    </a>
+                }
+            }
+            else
+            {
+                <h2 style="margin:20px">Okunmayan Mesaj yoktur</h2>
+            }
+
+
+
+
+        </div>
+
+        <a href="/Admin/Contact/Index" class="dropdown-item text-center text-primary font-weight-bold py-3">Hepsini Göster</a>
+    </div>
+</li>

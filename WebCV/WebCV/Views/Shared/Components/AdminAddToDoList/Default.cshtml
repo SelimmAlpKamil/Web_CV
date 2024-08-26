@@ -1,0 +1,18 @@
+﻿@model EntityLayer.Concreate.ToDoList
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<form method="post" asp-controller="ToDoList" asp-action="AddToDo"  style="margin:10px">
+    <input type="text" placeholder="Yapıalcak madde gir" asp-for="TodoListTitle" class="form-control" />
+    @if (TempData["errorMessage"] != null)
+    {
+        <span class="alert-danger">@TempData["errorMessage"]</span>
+    }
+    <br />
+
+    <button class="btn btn-outline-info">Ekle</button>
+
+</form>

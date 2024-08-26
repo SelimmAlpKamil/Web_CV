@@ -1,0 +1,21 @@
+﻿@model EntityLayer.Concreate.Skill
+@{
+    ViewData["Title"] = "UppdateSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<form method="post" class="form-group" style="margin:10px">
+    <input type="hidden" class="form-control" asp-for="SkillID" />
+    <label>İsim</label>
+    <input type="text" class="form-control" asp-for="SkillName"/>
+    <span class="alert-danger" asp-validation-for="SkillName"></span>
+    <br />
+    <label>Değer</label>
+    <input type="text" class="form-control" asp-for="SkillValue" />
+    <span class="alert-danger" asp-validation-for="SkillValue"></span>
+    <br />
+    <button class="btn btn-outline-info">Güncelle</button>
+</form>
+
+

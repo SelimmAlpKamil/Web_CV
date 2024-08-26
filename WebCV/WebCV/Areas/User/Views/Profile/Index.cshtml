@@ -1,0 +1,35 @@
+﻿@model WebCV.Areas.User.Models.UserUpdateViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<form method="post" class="form-group" style="margin:10px">
+    <label>İsim</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="alert-danger"></span>
+    <br />
+    <label>Soyad</label>
+    <input type="text" class="form-control" asp-for="Surname" />
+    <span asp-validation-for="Surname" class="alert-danger"></span>
+    <br />
+    <label>Mail</label>
+    <input type="text" class="form-control" asp-for="Mail" />
+    <span asp-validation-for="Mail" class="alert-danger"></span>
+    <br />
+    <label>Telefon</label>
+    <input type="text" class="form-control" asp-for="Phone" />
+    <span asp-validation-for="Phone" class="alert-danger"></span>
+    <br />
+    <label>Şifre</label>
+    <input type="password" class="form-control" asp-for="Password" />
+    <span asp-validation-for="Password" class="alert-danger"></span>
+    <br />
+    <label>Şifre tekrar</label>
+    <input type="password" class="form-control" asp-for="PasswordConfing" />
+    <span asp-validation-for="PasswordConfing" class="alert-danger"></span>
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

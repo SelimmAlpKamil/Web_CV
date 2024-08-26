@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Concreate.Service
+
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group" style="margin:10px">
+    <label>Başık</label>
+    <input type="text" class="form-control" asp-for="ServiceTitle" />
+    <span class="alert-danger" asp-validation-for="ServiceTitle"></span>
+    <br />
+    <label>Resim</label>
+    <input type="text" class="form-control" asp-for="ServiceImageURL" />
+    <span class="alert-danger" asp-validation-for="ServiceImageURL"></span>
+    <br />
+    <button class="btn btn-outline-info">Ekle</button>
+</form>
+

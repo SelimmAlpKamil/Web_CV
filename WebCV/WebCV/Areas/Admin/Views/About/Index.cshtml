@@ -1,0 +1,41 @@
+﻿@model EntityLayer.Concreate.About
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group" style="margin:10px">
+    <input type="hidden" class="form-control" asp-for="AboutId" />
+    <label>başlık</label>
+    <input type="text" class="form-control" asp-for="AboutHeader" />
+    <span asp-validation-for="AboutHeader" class="alert-danger"></span>
+    <br />
+    <label>Yaş</label>
+    <input type="text" class="form-control" asp-for="AboutAge" />
+    <span asp-validation-for="AboutAge" class="alert-danger"></span>
+    <br />
+    <label>Telefon</label>
+    <input type="text" class="form-control" asp-for="AboutPhone" />
+    <span asp-validation-for="AboutPhone" class="alert-danger"></span>
+    <br />
+    <label>Mail</label>
+    <input type="text" class="form-control" asp-for="AboutMail" />
+    <span asp-validation-for="AboutMail" class="alert-danger"></span>
+    <br />
+    <label>Resim adresi</label>
+    <input type="text" class="form-control" asp-for="AboutImageURL" />
+    <span asp-validation-for="AboutImageURL" class="alert-danger"></span>
+    <br />
+    <label>Açıklama</label>
+    <textarea type="text" class="form-control" asp-for="AboutDescription" rows="5" cols="20"></textarea>
+    <span asp-validation-for="AboutDescription" class="alert-danger"></span>
+    <br />
+    <label>Adres</label>
+    <textarea type="text" class="form-control" asp-for="AboutAddress" rows="5" cols="20"></textarea>
+    <span asp-validation-for="AboutAddress" class="alert-danger"></span>
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+    
+</form>
+

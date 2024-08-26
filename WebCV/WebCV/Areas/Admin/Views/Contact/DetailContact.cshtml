@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concreate.Contact
+
+@{
+    ViewData["Title"] = "DetailContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" style="margin:10px">
+
+    <label>İsim</label>
+    <input type="text" class="form-control" asp-for="ContactName" readonly />
+
+    <br />
+    <label>Mail</label>
+    <input type="text" class="form-control" asp-for="ContactMail" readonly />
+
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="ContactSubject" readonly />
+
+    <br />
+    <label>Mesaj</label>
+    <textarea type="text" class="form-control" asp-for="ContactMessage" rows="5" cols="20" readonly></textarea>
+
+    <br />
+
+</form>
+
+<a href="mailto:@ViewBag.Contact" class="btn btn-outline-primary">Cevapla</a>
+

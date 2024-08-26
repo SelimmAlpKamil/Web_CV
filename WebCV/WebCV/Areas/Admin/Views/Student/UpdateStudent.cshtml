@@ -1,0 +1,28 @@
+﻿@model EntityLayer.Concreate.Student
+
+@{
+    ViewData["Title"] = "UppdateStudent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<form method="post" class="form-group" style="margin:10px">
+    <input type="hidden" class="form-control" asp-for="StudentId" />
+    <label>Başık</label>
+    <input type="text" class="form-control" asp-for="StudentName" />
+    <span class="alert-danger" asp-validation-for="StudentName"></span>
+    <br />
+    <label>Tarih</label>
+    <input type="text" class="form-control" asp-for="StudentDate" />
+    <span class="alert-danger" asp-validation-for="StudentDate"></span>
+    <br />
+    <label>Resim</label>
+    <input type="text" class="form-control" asp-for="StudentImageURL" />
+    <span class="alert-danger" asp-validation-for="StudentImageURL"></span>
+    <br />
+    <label>Açıklama</label>
+    <textarea class="form-control" asp-for="StudentDescription" rows="5" cols="10"></textarea>
+    <span class="alert-danger" asp-validation-for="StudentDescription"></span>
+    <br />
+    <button class="btn btn-outline-info">Güncelle</button>
+</form>

@@ -1,0 +1,311 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="scrollbar-inner">
+
+
+        <div class="navbar-inner">
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                <!-- Nav items -->
+                <ul class="navbar-nav">
+                    
+
+                    @if(TempData["dashboardActive"] == "active"){
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Dashborad/Index">
+                                <i class="ni ni-tv-2 text-primary"></i>
+                                <span class="nav-link-text">Dashboard</span>
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link " href="/Admin/Dashborad/Index">
+                                <i class="ni ni-tv-2 text-primary"></i>
+                                <span class="nav-link-text">Dashboard</span>
+                            </a>
+                        </li>
+                    }
+
+                    @if (TempData["SenderActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Message/SenderMessage">
+                                <i class="ni ni-bag-17 text-primary"></i>
+                                <span class="nav-link-text">Gönderilen Mesajlar</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link " href="/Admin/Message/SenderMessage">
+                                <i class="ni ni-bag-17 text-primary"></i>
+                                <span class="nav-link-text">Gönderilen Mesajlar</span>
+                            </a>
+                        </li>
+
+                    }
+
+                    @if (TempData["RecevirActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active " href="/Admin/Message/RecevirMessage">
+                                <i class="ni ni-bag-17 text-red"></i>
+                                <span class="nav-link-text">Gelen Mesaj</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link " href="/Admin/Message/RecevirMessage">
+                                <i class="ni ni-bag-17 text-red"></i>
+                                <span class="nav-link-text">Gelen Mesaj</span>
+                            </a>
+                        </li>
+                    }
+
+                    @if (TempData["socialMediaActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active " href="/Admin/SocialMedia/Index">
+                                <i class="ni ni-air-baloon text-green"></i>
+                                <span class="nav-link-text">Sosyal Medya</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link " href="/Admin/SocialMedia/Index">
+                                <i class="ni ni-air-baloon text-green"></i>
+                                <span class="nav-link-text">Sosyal Medya</span>
+                            </a>
+                        </li>
+                    }
+
+                    @if (TempData["featureActive"] == "active")
+                    {
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Feature/Index">
+                                <i class="ni ni-planet text-orange"></i>
+                                <span class="nav-link-text">Öne Çıkanlar</span>
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/Feature/Index">
+                                <i class="ni ni-planet text-orange"></i>
+                                <span class="nav-link-text">Öne Çıkanlar</span>
+                            </a>
+                        </li>
+                    }
+
+                    @if (TempData["aboutActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/About/Index">
+                                <i class="ni ni-pin-3 text-primary"></i>
+                                <span class="nav-link-text">Hakkımızda</span>
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/About/Index">
+                                <i class="ni ni-pin-3 text-primary"></i>
+                                <span class="nav-link-text">Hakkımızda</span>
+                            </a>
+                        </li>
+                    
+                    }
+                    @if (TempData["serviceActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Services/Index">
+                                <i class="ni ni-single-02 text-yellow"></i>
+                                <span class="nav-link-text">Hizmetler</span>
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/Services/Index">
+                                <i class="ni ni-single-02 text-yellow"></i>
+                                <span class="nav-link-text">Hizmetler</span>
+                            </a>
+                        </li>
+                    }
+                    @if (TempData["skillActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Skill/Index">
+                                <i class="ni ni-bullet-list-67 text-red"></i>
+                                <span class="nav-link-text">Yetenekler</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link " href="/Admin/Skill/Index">
+                                <i class="ni ni-bullet-list-67 text-red"></i>
+                                <span class="nav-link-text">Yetenekler</span>
+                            </a>
+                        </li>
+                    }
+                    @if (TempData["portfolioActive"] == "active"){
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Portfolio/Index">
+                                <i class="ni ni-key-25 text-info"></i>
+                                <span class="nav-link-text">Projeler</span>
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/Portfolio/Index">
+                                <i class="ni ni-key-25 text-info"></i>
+                                <span class="nav-link-text">Projeler</span>
+                            </a>
+                        </li>
+                    }
+                    @if (TempData["experienceActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Experience/Index">
+                                <i class="ni ni-badge text-yellow"></i>
+                                <span class="nav-link-text">Deneyim</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/Experience/Index">
+                                <i class="ni ni-badge text-yellow"></i>
+                                <span class="nav-link-text">Deneyim</span>
+                            </a>
+                        </li>
+                    }
+                    @if (TempData["studentActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Student/Index">
+                                <i class="ni ni-archive-2 text-blue"></i>
+                                <span class="nav-link-text">Eğitim</span>
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/Student/Index">
+                                <i class="ni ni-archive-2 text-blue"></i>
+                                <span class="nav-link-text">Eğitim</span>
+                            </a>
+                        </li>
+                    }
+                    @if (TempData["testimonialActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Testimonial/Index">
+                                <i class="ni ni-user-run text-brown"></i>
+                                <span class="nav-link-text">Referanslar</span>
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link " href="/Admin/Testimonial/Index">
+                                <i class="ni ni-user-run text-brown"></i>
+                                <span class="nav-link-text">Referanslar</span>
+                            </a>
+                        </li>
+                    }
+                    @if (TempData["contactActive"] == "active")
+                    {
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Contact/Index">
+                                <i class="ni ni-world-2 text-orange"></i>
+                                <span class="nav-link-text">Gelen İletişim Mesajları</span>
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/Contact/Index">
+                                <i class="ni ni-world-2 text-orange"></i>
+                                <span class="nav-link-text">Gelen İletişim Mesajları</span>
+                            </a>
+                        </li>
+                    }
+                    @if (TempData["roleActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Role/Index">
+                                <i class="ni ni-world text-green"></i>
+                                <span class="nav-link-text">Role İşlemleri</span>
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/Role/Index">
+                                <i class="ni ni-world text-green"></i>
+                                <span class="nav-link-text">Role İşlemleri</span>
+                            </a>
+                        </li>
+                    }
+                    @if (TempData["announcemntActive"] == "active")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Announcemnt/Index">
+                                <i class="ni ni-app text-blue"></i>
+                                <span class="nav-link-text">Duyuru</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/Announcemnt/Index">
+                                <i class="ni ni-app text-blue"></i>
+                                <span class="nav-link-text">Duyuru</span>
+                            </a>
+                        </li>
+                    }
+
+                    @if (TempData["profileActive"] == "active"){
+                    <li class="nav-item">
+                            <a class="nav-link active" href="/Admin/Profile/Index">
+                            <i class="ni ni-settings text-pink"></i>
+                            <span class="nav-link-text">Ayarlar</span>
+                        </a>
+                    </li>
+                    }else{
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin/Profile/Index">
+                                <i class="ni ni-settings text-pink"></i>
+                                <span class="nav-link-text">Ayarlar</span>
+                            </a>
+                        </li>
+                    }
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin/Login/SingOut">
+                            <i class="ni ni-fat-remove text-purple"></i>
+                            <span class="nav-link-text">Çıkış</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>

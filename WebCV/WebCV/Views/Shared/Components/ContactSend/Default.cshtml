@@ -1,0 +1,53 @@
+﻿@model EntityLayer.Concreate.Contact
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+
+
+
+
+
+<div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+    <div class="bg-light my-2 p-3 pt-2">
+        <form method="post" asp-controller="ContactSend" asp-action="ContactSend" >
+            <div class="form-group my-2">
+                <label for="name" class="form-label fw-bolder">İsim</label>
+                <input class="form-control" type="text" id="name"  required asp-for="ContactName">
+                <span class="alert-danger" asp-validation-for="ContactName"></span>
+            </div>
+            <div class="form-group my-2">
+                <label for="email" class="form-label fw-bolder">Mail</label>
+                <input class="form-control" type="email" id="email"  required asp-for="ContactMail">
+                <span class="alert-danger" asp-validation-for="ContactMail"></span>
+            </div>
+            <div class="form-group my-2">
+                <label for="email" class="form-label fw-bolder">Konu</label>
+                <input class="form-control" type="text" id="email" required asp-for="ContactSubject">
+                <span class="alert-danger" asp-validation-for="ContactSubject"></span>
+            </div>
+            <div class="form-group my-2">
+                <label for="message" class="form-label fw-bolder">Mesaj</label>
+                <textarea class="form-control" style="resize: none;" id="message"  rows="4" required asp-for="ContactMessage"></textarea>
+                <span class="alert-danger" asp-validation-for="ContactMessage"></span>
+            </div>
+            <button class="btn btn-primary mt-2">Gönder</button>
+            @if (TempData["ErrorMessages"] !=null)
+            {
+                <div class="alert alert-danger mt-3">
+                    <p>İsim Kısmı boş geçilemez. Karakter sınırı 1-100</p>
+                    <p>Mail Kısmı boş geçilemez. Karakter sınırı 5-50</p>
+                    <p>Konu Kısmı boş geçilemez. Karakter sınırı 5-200</p>
+                    <p>Mesaj Kısmı boş geçilemez. Karakter sınırı 10-5000</p>
+
+                </div>
+            }
+        </form>
+    </div>
+</div>
+
+
+

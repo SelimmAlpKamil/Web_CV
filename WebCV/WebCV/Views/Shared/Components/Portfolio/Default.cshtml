@@ -1,0 +1,38 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Portfolio>
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<div class="section px-2 px-lg-4 pt-5" id="portfolio">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="marker marker-center">Öne Çıkan Projelerim</h2>
+        </div>
+        <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
+            <div class="grid-sizer"></div>
+            @foreach(var x in Model)
+            {
+                <div class="grid-item">
+                    
+                        <figure class="portfolio-item">
+                        <a href="@x.PortfolioURL">
+                            <img src="@x.PortfolioImageURL"  />
+                        </a>
+                            <figcaption>
+                                <h4 class="h5 mb-0">@x.PortfolioTitle</h4>
+                            </figcaption>
+                        </figure>
+                   
+                </div>
+            }
+
+
+            
+
+            
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concreate.Experience
+
+@{
+    ViewData["Title"] = "AddExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group" style="margin:10px">
+    <label>Başık</label>
+    <input type="text" class="form-control" asp-for="ExperienceTitle" />
+    <span class="alert-danger" asp-validation-for="ExperienceTitle"></span>
+    <br />
+    <label>Tarih</label>
+    <input type="text" class="form-control" asp-for="ExperienceDate" />
+    <span class="alert-danger" asp-validation-for="ExperienceDate"></span>
+    <br />
+    <label>Resim</label>
+    <input type="text" class="form-control" asp-for="ExperienceImageURL" />
+    <span class="alert-danger" asp-validation-for="ExperienceImageURL"></span>
+    <br />
+    <label>Açıklama</label>
+    <textarea class="form-control" asp-for="ExperienceDescription" rows="5" cols="10"></textarea>
+    <span class="alert-danger" asp-validation-for="ExperienceDescription"></span>
+    <br />
+    <button class="btn btn-outline-info">Ekle</button>
+</form>
+

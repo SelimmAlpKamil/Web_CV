@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebCV",
+    "\\WebCV\\Areas",
+    "\\WebCV\\Areas\\Admin",
+    "\\WebCV\\Areas\\Admin\\Views",
+    "\\WebCV\\Areas\\Admin\\Views\\Role",
+    "\\WebCV\\Areas\\User",
+    "\\WebCV\\Areas\\User\\Views",
+    "\\WebCV\\Areas\\User\\Views\\Dashborad",
+    "\\WebCV\\wwwroot",
+    "\\WebCV\\wwwroot\\Template"
+  ],
+  "SelectedNode": "\\WebCV\\Areas\\User\\Views\\Dashborad\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}
