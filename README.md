@@ -79,24 +79,24 @@ Clone the Repository
 
 Open your terminal or command prompt and run:
 
-bash
-Kodu kopyala
+  
+
 git clone https://github.com/SelimmAlpKamil/Web_CV.git
 Navigate to the Project Directory
 
-bash
+  
 cd WebCV/WebCV
 Restore Dependencies
 
-bash
+  
 dotnet restore
 Build the Project
 
-bash
+  
 dotnet build
 Run the Application
 
-bash
+  
 dotnet run
 Open in Browser
 
@@ -201,13 +201,13 @@ Click the "Fork" button at the top right of the repository page to create a copy
 
 Clone Your Fork
 
-bash
-Kodu kopyala
+  
+ 
 git clone https://github.com/<your-username>/Web_CV.git
 Create a New Branch
 
-bash
-Kodu kopyala
+  
+ 
 git checkout -b feature/YourFeatureName
 Make Your Changes
 
@@ -215,13 +215,13 @@ Implement your feature or bug fix.
 
 Commit Your Changes
 
-bash
-Kodu kopyala
+  
+ 
 git commit -m "Add feature: YourFeatureName"
 Push to Your Fork
 
-bash
-Kodu kopyala
+  
+ 
 git push origin feature/YourFeatureName
 Create a Pull Request
 
@@ -246,8 +246,8 @@ GitHub: Your GitHub Profile
 Note: Replace placeholders like [Your Name], [your.email@example.com], and URLs with your actual information.
 
 Example README.md File
-markdown
-Kodu kopyala
+  
+ 
 # Web CV
 
 A professional, responsive web-based Curriculum Vitae (CV) built with ASP.NET Core, C#, HTML, CSS, and JavaScript. This project showcases personal and professional information, including biography, work experience, education, skills, and contact details in a modern and elegant online format.
@@ -298,8 +298,8 @@ Here is a typical ASP.NET Core project structure for the Web CV:
 
 WebCV/ ├── Controllers/ │ └── HomeController.cs # Controller for handling requests ├── Models/ │ └── CVModel.cs # Model representing CV data ├── Views/ │ ├── Home/ │ │ └── Index.cshtml # Main view for the CV │ └── Shared/ │ └── _Layout.cshtml # Layout view ├── wwwroot/ │ ├── css/ │ │ └── site.css # CSS files │ ├── js/ │ │ └── site.js # JavaScript files │ └── images/ │ └── profile.jpg # Images used in the CV ├── appsettings.json # Configuration file ├── Program.cs # Application entry point ├── Startup.cs # Startup configuration (if using ASP.NET Core <6) ├── WebCV.csproj # Project file └── README.md # Project README
 
-markdown
-Kodu kopyala
+  
+ 
 
 ## Installation
 
@@ -317,27 +317,27 @@ To run this project locally, follow the steps below. Ensure you have the necessa
 
    Open your terminal or command prompt and run:
 
-   ```bash
+   ```  
    git clone https://github.com/SelimmAlpKamil/Web_CV.git
 Navigate to the Project Directory
 
-bash
-Kodu kopyala
+  
+ 
 cd WebCV/WebCV
 Restore Dependencies
 
-bash
-Kodu kopyala
+  
+ 
 dotnet restore
 Build the Project
 
-bash
-Kodu kopyala
+  
+ 
 dotnet build
 Run the Application
 
-bash
-Kodu kopyala
+  
+ 
 dotnet run
 Open in Browser
 
@@ -442,13 +442,13 @@ Click the "Fork" button at the top right of the repository page to create a copy
 
 Clone Your Fork
 
-bash
-Kodu kopyala
+  
+ 
 git clone https://github.com/<your-username>/Web_CV.git
 Create a New Branch
 
-bash
-Kodu kopyala
+  
+ 
 git checkout -b feature/YourFeatureName
 Make Your Changes
 
@@ -456,13 +456,13 @@ Implement your feature or bug fix.
 
 Commit Your Changes
 
-bash
-Kodu kopyala
+  
+ 
 git commit -m "Add feature: YourFeatureName"
 Push to Your Fork
 
-bash
-Kodu kopyala
+  
+ 
 git push origin feature/YourFeatureName
 Create a Pull Request
 
