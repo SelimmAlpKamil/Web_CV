@@ -491,6 +491,291 @@ LinkedIn https://www.linkedin.com/in/selimalpkamil/
 
 
 
+# Web CV
+
+A professional, responsive web-based Curriculum Vitae (CV) built with ASP.NET Core, C#, HTML, CSS, and JavaScript. This project showcases personal and professional information, including biography, work experience, education, skills, and contact details in a modern and elegant online format.
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [Contact](#contact)
+
+## Project Overview
+
+The **Web CV** project is a web application designed to present your personal and professional details in a clean, organized, and visually appealing manner. Built with ASP.NET Core and C#, it leverages modern web technologies to create a dynamic and responsive online CV that can be easily customized and deployed.
+
+## Technologies Used
+
+### Backend
+- **C#**: Server-side logic and data handling.
+- **ASP.NET Core MVC/Razor Pages**: Framework for building the web application structure.
+- **Entity Framework Core**: (If applicable) ORM for database interactions.
+
+### Frontend
+- **HTML5 & CSS3**: Structuring and styling web pages.
+- **JavaScript**: Adding interactivity and dynamic features.
+- **Bootstrap**: (If used) For responsive design and pre-built components.
+
+## Features
+
+- **Responsive Design**: Looks great on all devices, including desktops, tablets, and smartphones.
+- **Dynamic Content Management**: Update your information through the C# backend.
+- **Modern UI/UX**: Clean and professional design focused on readability and user experience.
+- **Sectioned Layout**: Clearly defined sections such as About, Experience, Education, Skills, and Contact.
+- **Interactive Elements**: Smooth scrolling, animations, and hover effects enhance user engagement.
+- **SEO Friendly**: Optimized for search engines to improve visibility.
+- **Easy Deployment**: Can be deployed on various hosting platforms like Azure or other cloud services.
+
+## Project Structure
+
+Here is a typical ASP.NET Core project structure for the Web CV:
+
+```plaintext
+WebCV/
+├── Controllers/
+│   └── HomeController.cs       # Controller for handling requests
+├── Models/
+│   └── CVModel.cs              # Model representing CV data
+├── Views/
+│   ├── Home/
+│   │   └── Index.cshtml        # Main view for the CV
+│   └── Shared/
+│       └── _Layout.cshtml      # Layout view
+├── wwwroot/
+│   ├── css/
+│   │   └── site.css            # CSS files
+│   ├── js/
+│   │   └── site.js             # JavaScript files
+│   └── images/
+│       └── profile.jpg         # Images used in the CV
+├── appsettings.json            # Configuration file
+├── Program.cs                  # Application entry point
+├── Startup.cs                  # Startup configuration (if using ASP.NET Core <6)
+├── WebCV.csproj                # Project file
+└── README.md                   # Project README
+```
+
+## Installation
+
+To run this project locally, follow these steps:
+
+### Prerequisites
+
+- **.NET SDK**: Download and install the latest .NET SDK from [Microsoft .NET](https://dotnet.microsoft.com/download).
+- **Visual Studio**: (Recommended) Download and install Visual Studio 2022 or later with ASP.NET and web development workload.
+- **Git**: For cloning the repository.
+
+### Steps to Install and Run
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/SelimmAlpKamil/Web_CV.git
+   ```
+
+2. **Navigate to the Project Directory**
+
+   ```bash
+   cd WebCV/WebCV
+   ```
+
+3. **Restore Dependencies**
+
+   ```bash
+   dotnet restore
+   ```
+
+4. **Build the Project**
+
+   ```bash
+   dotnet build
+   ```
+
+5. **Run the Application**
+
+   ```bash
+   dotnet run
+   ```
+
+6. **Open in Browser**
+
+   Once the application is running, open your web browser and navigate to `https://localhost:5001` or the URL specified in the terminal.
+
+## Usage
+
+- **Home Page**: Displays your profile picture, name, job title, and sections like About, Experience, Education, Skills, and Contact.
+- **Editing Content**: Modify the views (Razor Pages or MVC Views) and models to update your personal information, work experience, education, etc.
+- **Adding Sections**: Extend the project by adding new models, views, and controllers as needed.
+
+### Example: Updating Personal Information
+
+1. **Open the Project in Visual Studio**
+2. **Navigate to the Home Controller**
+
+   Open `Controllers/HomeController.cs` and update the data being passed to the view.
+
+3. **Update the View**
+
+   Open `Views/Home/Index.cshtml` and modify the HTML to reflect your updated information.
+
+4. **Modify Styles**
+
+   Open `wwwroot/css/site.css` to change the styling, such as colors, fonts, and layout.
+
+## Customization
+
+### Personal Information
+
+- **Profile Picture**: Replace the existing image in `wwwroot/images/profile.jpg` with your own picture. Ensure the filename matches or update the path in the view.
+- **Name and Job Title**: Update these directly in the `Index.cshtml` view or through the model in `HomeController.cs`.
+
+### Styling
+
+- **Colors and Fonts**: Modify the `site.css` file in `wwwroot/css` to change the color scheme, fonts, and other styling aspects.
+- **Layout Adjustments**: Use CSS and Bootstrap classes (if used) to adjust the layout to your preference.
+
+### Adding New Sections
+
+1. **Create a New Model (if needed)**
+
+   For example, to add a Portfolio section, create `PortfolioModel.cs` in the `Models` folder.
+
+2. **Update the Controller**
+
+   Modify `HomeController.cs` to include the new model and pass data to the view.
+
+3. **Create a New View or Update Existing View**
+
+   Update `Index.cshtml` to include the new section, using HTML and Razor syntax to display the data.
+
+4. **Style the New Section**
+
+   Add necessary CSS in `site.css` to style the new section appropriately.
+
+## Deployment
+
+You can deploy this web application to various hosting platforms. Below are instructions for deploying to Azure and GitHub Pages (for static sites).
+
+### Deploy to Azure
+
+1. **Create an Azure Account**
+
+   If you don't have one, sign up at [Azure](https://azure.microsoft.com/).
+
+2. **Set Up an App Service**
+
+   - Navigate to the Azure Portal.
+   - Create a new App Service.
+   - Choose the appropriate runtime stack (e.g., .NET 6).
+
+3. **Publish from Visual Studio**
+
+   - Open your project in Visual Studio.
+   - Right-click the project in Solution Explorer and select **Publish**.
+   - Choose Azure as the target and follow the prompts to deploy.
+
+4. **Configure Settings**
+
+   Ensure that environment variables and app settings are correctly configured in Azure.
+
+### Deploy to Other Platforms
+
+- **Heroku**: Use the .NET buildpack to deploy your application.
+- **AWS Elastic Beanstalk**: Supports ASP.NET Core applications.
+- **Docker**: Containerize your application and deploy to any Docker-compatible platform.
+
+### Deploy as a Static Site
+
+If your project is purely static (without server-side logic), you can deploy it to GitHub Pages:
+
+1. **Build the Project**
+
+   If using static site generators, ensure the output is in a `docs` or `public` folder.
+
+2. **Push to GitHub**
+
+   Commit and push your changes to the main branch.
+
+3. **Configure GitHub Pages**
+
+   - Go to your repository settings.
+   - Under "Pages", select the branch and folder to serve the site from.
+   - Save and your site will be available at `https://<your-username>.github.io/Web_CV/`.
+
+   Note: Since your project uses C#, it's likely a dynamic site that requires a server, so GitHub Pages may not be suitable unless you convert it to a static site.
+
+## Contributing
+
+Contributions are welcome! To contribute to this project, follow the steps below:
+
+1. **Fork the Repository**
+
+   Click the "Fork" button at the top right of the repository page to create a copy of the repository in your GitHub account.
+
+2. **Clone Your Fork**
+
+   ```bash
+   git clone https://github.com/<your-username>/Web_CV.git
+   ```
+
+3. **Create a New Branch**
+
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+
+4. **Make Your Changes**
+
+   Implement your feature or bug fix.
+
+5. **Commit Your Changes**
+
+   ```bash
+   git commit -m "Add feature: YourFeatureName"
+   ```
+
+6. **Push to Your Fork**
+
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+
+7. **Create a Pull Request**
+
+   - Navigate to the original repository.
+   - Click on "Pull Requests" and then "New Pull Request".
+   - Select your branch and provide a description of your changes.
+   - Submit the pull request for review.
+
+### Guidelines
+
+- **Code Quality**: Ensure your code follows the project's coding
+
+ standards.
+- **Documentation**: Update README and other documentation as necessary.
+- **Testing**: Include tests for new features or bug fixes.
+
+## Contact
+
+For questions, feedback, or support, please contact me:
+
+- **Email**: [your.email@example.com](mailto:your.email@example.com)
+- **LinkedIn**: [LinkedIn Profile](https://linkedin.com/in/your-profile)
+- **GitHub**: [SelimmAlpKamil](https://github.com/SelimmAlpKamil)
+
+Thank you for checking out my Web CV project!
+
+---
+
+Bu güncellenmiş README.md dosyası, proje hakkında kapsamlı ve profesyonel bir bilgi sunarak GitHub'da şık bir görünüm elde etmenize yardımcı olacaktır. Herhangi bir ekleme veya değişiklik yapmamı isterseniz, bana bildirin!
 
 
 
