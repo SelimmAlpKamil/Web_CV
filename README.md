@@ -240,4 +240,4 @@ For any questions, suggestions, or feedback, feel free to reach out via the foll
 - **LinkedIn**: [Selim Alp Kamil](https://www.linkedin.com/in/selimalpkamil/)
 ```
 
-Ekran görüntüleri ve bilgileriniz README'ye eklendi. Diğer kısımlar ise kaldırıldı. Başka
+
